@@ -55,7 +55,7 @@ Example:
 ## Sample output
 ![Sample Output](output/p00726056-231124%20Left.png)
 
-![Sample Output](output/P01043505-231208%20Left.png)
+![Sample Output](output/P00085041-231029%20Left.png)
 
 ## Contributing
 
