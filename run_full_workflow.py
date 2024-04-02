@@ -1,4 +1,5 @@
 import sys
+import os
 
 def print_help():
     help_message = """
@@ -7,14 +8,11 @@ Set the path configurations with specified command-line arguments.
 
 Options:
     --out_root_folder=PATH     Path to the output root folder. Default is 'output'.
-    --scan_root_folder=PATH    Path to the root folder containing CT images. Default is 'CT_images'.
-    --scan_id=ID              Identifier for the scan. Default is 'p00726056-231124'.
+    --scan_path=PATH    Full path to the containing CT images. Default is 'CT_images/p00726056-231124'.
     --target_side=SIDE        Target side. Options are 'Left' or 'Right'. Default is 'Left'.
-    --view_ch=CHANNEL         Model channel configuration, 1 for cholesteatoma, 0 for non-cholesteatoma. Default is 1.
-    --optimal_threshold=VALUE Heatmap threshold for visualization. Default is 0.45.
 
 Example:
-    python {script_name} --out_root_folder=output --scan_root_folder=CT_images --scan_id=p00726123 --target_side=Left --view_ch=1 --optimal_threshold=0.45
+    python {script_name} --out_root_folder=output --scan_path=CT_images/p00726056-231124 --target_side=Left
     """.format(script_name=sys.argv[0])
     print(help_message)
 
@@ -45,11 +43,8 @@ def parse_args(defaults):
 # Default values setup
 defaults = {
     'out_root_folder': r'output',
-    'scan_root_folder': r'CT_images',
-    'scan_id': 'p00726056-231124',
+    'scan_path': r'CT_images/p00726056-231124',
     'target_side': 'Left',
-    'view_ch': 1,
-    'optimal_threshold': 0.45
 }
 
 if len(sys.argv) == 1:
@@ -62,20 +57,27 @@ args = parse_args(defaults)
 # Use the arguments as needed
 # print(args)  # Just for demonstration
 
-import scripts.full_workflow_utils as workflow
-import torch
-import tensorflow as tf
-import os
+
 
 
 ''' define paths'''
-out_root_folder = r'output'
-scan_root_folder = r'CT_images'
+out_root_folder = args['out_root_folder'] # output
 
 ''' specify scan'''
-scan_id = 'p00726056-231124'
+# scan_root_folder = r'CT_images'
 
-target_side = 'Left'
+scan_path = args['scan_path']# p00726056-231124'
+scan_id = scan_path.split(os.sep)[-1]
+scan_root_folder= scan_path.split(os.sep +scan_id)[0]
+# print(scan_root_folder)
+# # print(scan_path)
+# print(scan_id)
+# dsd
+target_side = args['target_side'] #'Left'
+
+import scripts.full_workflow_utils as workflow
+import torch
+import tensorflow as tf
 
 ''' get models'''
 roi_model_path = r'Model_weights/YOLO_3DCT.pt' 
@@ -84,6 +86,7 @@ model_roi = torch.hub.load('ultralytics/yolov5', 'custom', path = roi_model_path
 model_3dcom_path = r"Model_weights/3d_image_classification_task2.h5"
 model_3dcom = workflow.get_model(width=128, height=128, depth=32)
 model_3dcom.load_weights(model_3dcom_path)
+
 optimal_threshold = 0.45
 view_ch = 1 # 1 for cholesteatoma, 0 for non-cholesteatoma
 
@@ -96,7 +99,7 @@ last_conv_layer_name = workflow.get_tensorflow_last_layer(model_3dcom) # "conv3d
 ''' execution'''
 
 ''' initial assessment of the dicom file''' 
-df_scan = workflow.get_scan_info(os.path.join(scan_root_folder, scan_id))
+df_scan = workflow.get_scan_info(scan_path)#os.path.join(scan_root_folder, scan_id))
 read_path = df_scan.iloc[0]['Path']
 dicom_array = workflow.process_scan(read_path)
 
