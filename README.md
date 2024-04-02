@@ -57,8 +57,8 @@ Options:
 Example:
     python run_full_workflow.py --out_root_folder=output --scan_root_folder=CT_images --scan_id=p00726123 --target_side=Left --view_ch=1 --optimal_threshold=0.45
 ```
-
-![Sample Output](output/p00726056-231124 Left.png)
+## Sample output
+![Sample Output](output/p00726056-231124%20Left.png)
 
 ## Contributing
 
