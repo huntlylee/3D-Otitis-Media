@@ -55,6 +55,8 @@ Example:
 ## Sample output
 ![Sample Output](output/p00726056-231124%20Left.png)
 
+![Sample Output](output/P01043505-231208%20Left.png)
+
 ## Contributing
 
 Contributions to improve the model or its implementation are welcome. Please feel free to fork the repository, make changes, and submit a pull request.
