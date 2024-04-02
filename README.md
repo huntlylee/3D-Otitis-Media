@@ -1,10 +1,10 @@
 # Automatic Evaluation of Chronic Otitis Media (COM) Model
 
-This repository contains the machine learning model for automatic evaluation of Chronic Otitis Media (COM) using temporal bone CT scans. The model is designed to assist clinicians and researchers in diagnosing COM and its subtypes, such as chronic suppurative otitis media (CSOM) and cholesteatoma.
+This repository contains the artificial intelligence model for automatic evaluation of Chronic Otitis Media (COM) using temporal bone CT scans. The model is designed to assist clinicians and researchers in diagnosing COM and its subtypes, such as chronic suppurative otitis media (CSOM) and cholesteatoma, in an explainable fashion.
 
 ## Description
 
-The COM evaluation model employs a convolutional neural network (CNN) architecture optimized for analyzing three-dimensional (3D) medical imaging data. It provides an end-to-end diagnostic tool capable of processing raw CT images to classify and differentiate various forms of COM.
+The COM evaluation model employs a convolutional neural network (CNN) architecture optimized for analyzing three-dimensional (3D) medical imaging data. It provides an end-to-end diagnostic tool capable of processing raw CT images to classify and differentiate various forms of COM. The heatmap technique is employed to exhibit the rationale of the AI model in making predictions.
 
 ## Repository Primary Contents 
 
@@ -68,7 +68,8 @@ Contributions to improve the model or its implementation are welcome. Please fee
 
 If you use this model or the associated code in your research, please cite the following paper:
 
-[Author(s), "Title of the Paper", Journal/Conference, Year]
+Chen B, Li Y, Sun Y, Sun H, Wang Y, Lyu J, Guo J, Cheng Y, Niu X, Yang L, Xu J, Yang J, Huang Y, Chi F, Liang B, Ren D. Three-Dimensional and Explainable Deep Learning for Evaluation of Chronic Otitis Media Based on Temporal Bone Computed Tomography: Development Study
+JMIR Preprints. 09/08/2023:51706. DOI: 10.2196/preprints.51706. URL: https://preprints.jmir.org/preprint/51706
 
 ## License
 
