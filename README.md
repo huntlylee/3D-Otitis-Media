@@ -41,21 +41,16 @@ Please walk through the tutorial.ipynb to get detailed information on the workfl
 Run the full workflow script with the following command:
 
 ```bash
-python run_full_workflow.py [OPTIONS]
-
 Usage: python run_full_workflow.py [OPTIONS]
 Set the path configurations with specified command-line arguments.
 
 Options:
     --out_root_folder=PATH     Path to the output root folder. Default is 'output'.
-    --scan_root_folder=PATH    Path to the root folder containing CT images. Default is 'CT_images'.
-    --scan_id=ID              Identifier for the scan. Default is 'p00726056-231124'.
+    --scan_path=PATH    Full path to the containing CT images. Default is 'CT_images/p00726056-231124'.
     --target_side=SIDE        Target side. Options are 'Left' or 'Right'. Default is 'Left'.
-    --view_ch=CHANNEL         Model channel configuration, 1 for cholesteatoma, 0 for non-cholesteatoma. Default is 1.
-    --optimal_threshold=VALUE Heatmap threshold for visualization. Default is 0.45.
 
 Example:
-    python run_full_workflow.py --out_root_folder=output --scan_root_folder=CT_images --scan_id=p00726123 --target_side=Left --view_ch=1 --optimal_threshold=0.45
+    python run_full_workflow.py --out_root_folder=output --scan_path=CT_images/p00726056-231124 --target_side=Left
 ```
 ## Sample output
 ![Sample Output](output/p00726056-231124%20Left.png)
