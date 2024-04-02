@@ -1,4 +1,4 @@
-# Automatic Evaluation of Chronic Otitis Media (COM) Model
+# A Three-Dimensional and Explainable AI Model for Automatic Evaluation of Chronic Otitis Media (COM)
 
 This repository contains the artificial intelligence model for automatic evaluation of Chronic Otitis Media (COM) using temporal bone CT scans. The model is designed to assist clinicians and researchers in diagnosing COM and its subtypes, such as chronic suppurative otitis media (CSOM) and cholesteatoma, in an explainable fashion.
 
