@@ -38,6 +38,9 @@ To set up your environment to run the model, follow these steps:
 Please walk through the tutorial.ipynb to get detailed information on the workflow execution and how the arguments are set up and utilized.
 
 ## Usage
+
+The temporal bone CT images should be in the DICOM format (https://en.wikipedia.org/wiki/DICOM), It is ideally placed in a subfolder within the repository folder. 
+
 Run the full workflow script with the following command:
 
 ```bash
@@ -46,7 +49,7 @@ Set the path configurations with specified command-line arguments.
 
 Options:
     --out_root_folder=PATH     Path to the output root folder. Default is 'output'.
-    --scan_path=PATH    Full path to the containing CT images. Default is 'CT_images/p00726056-231124'.
+    --scan_path=PATH    Full path to the folder containing the individual's CT scan. For example: 'CT_images/p00726056-231124'.
     --target_side=SIDE        Target side. Options are 'Left' or 'Right'. Default is 'Left'.
 
 Example:
