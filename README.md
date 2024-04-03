@@ -9,12 +9,13 @@ The COM evaluation model employs a convolutional neural network (CNN) architectu
 ## Repository Primary Contents 
 
 - `tutoral.ipynb`: Jupyter notebooks with examples and usage instructions.
-- `run_full_workflow.py`: the python script that take DICOM image and generate output. 
+- `run_full_workflow.py`: the python script that take DICOM image and generate output.
+- `Source_code/`: Source code and trained models during development for validation purpose
 - `scripts/`: Source code for model evaluation, and deployment.
 - `Model_weights/`: the pretrained deep learning model weights for application.
 - `environment.yml`: List of Python packages installed with conda.
 - `requirements.txt`: List of Python dependencies for setting up the environment.
-
+  
 ## Installation
 
 To set up your environment to run the model, follow these steps:
