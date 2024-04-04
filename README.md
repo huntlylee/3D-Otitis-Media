@@ -40,7 +40,7 @@ Please walk through the tutorial.ipynb to get detailed information on the workfl
 
 ## Usage
 
-The temporal bone CT images should be in the DICOM format (https://en.wikipedia.org/wiki/DICOM), It is ideally placed in a subfolder within the repository folder. 
+The temporal bone CT images should be in the [DICOM](https://en.wikipedia.org/wiki/DICOM) format. It is ideally placed in a subfolder within the repository folder. 
 
 Run the full workflow script with the following command:
 
