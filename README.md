@@ -1,5 +1,7 @@
 # 🖥️ A Three-Dimensional and Explainable AI Model for Automatic Evaluation of Chronic Otitis Media (COM) 👂
 
+![GitHub License](https://img.shields.io/github/license/huntlylee/3D-Otitis-Media)
+
 This repository contains the artificial intelligence model for automatic evaluation of Chronic Otitis Media (COM) using temporal bone CT scans. The model is designed to assist clinicians and researchers in diagnosing COM and its subtypes, such as chronic suppurative otitis media (CSOM) and cholesteatoma, in an explainable fashion.
 
 ## Description
