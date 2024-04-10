@@ -74,7 +74,7 @@ JMIR Preprints. 09/08/2023:51706. DOI: 10.2196/preprints.51706. URL: https://pre
 
 ## License
 
-This project is licensed under the [GPL-3.0 license] - see the `LICENSE` file for details.
+This project is licensed under the [GPL-3.0 license](LICENSE.txt).
 
 ## Contact
 
