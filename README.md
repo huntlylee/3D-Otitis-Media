@@ -38,7 +38,7 @@ To set up your environment to run the model, follow these steps:
 
 ## Tutorial
 
-Please walk through the tutorial.ipynb to get detailed information on the workflow execution and how the arguments are set up and utilized.
+Please walk through the `tutorial.ipynb` to get detailed information on the workflow execution and how the arguments are set up and utilized.
 
 ## Usage
 
