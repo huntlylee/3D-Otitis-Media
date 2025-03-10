@@ -71,8 +71,7 @@ Contributions to improve the model or its implementation are welcome. Please fee
 
 If you use this model or the associated code in your research, please cite the following paper:
 
-Chen B, Li Y, Sun Y, Sun H, Wang Y, Lyu J, Guo J, Cheng Y, Niu X, Yang L, Xu J, Yang J, Huang Y, Chi F, Liang B, Ren D. Three-Dimensional and Explainable Deep Learning for Evaluation of Chronic Otitis Media Based on Temporal Bone Computed Tomography: Development Study
-JMIR Preprints. 09/08/2023:51706. DOI: 10.2196/preprints.51706. URL: https://preprints.jmir.org/preprint/51706
+Chen B, Li Y, Sun Y, Sun H, Wang Y, Lyu J, Guo J, Bao S, Cheng Y, Niu X, Yang L, Xu J, Yang J, Huang Y, Chi F, Liang B, Ren D. A 3D and Explainable Artificial Intelligence Model for Evaluation of Chronic Otitis Media Based on Temporal Bone Computed Tomography: Model Development, Validation, and Clinical Application. J Med Internet Res. 2024 Aug 8;26:e51706. doi: 10.2196/51706. PMID: 39116439; PMCID: PMC11342006.
 
 ## License
 
